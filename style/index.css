@@ -1,0 +1,212 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/image.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+div {
+  margin-top: 30px;
+  position: relative;
+  width: 530px;
+  height: 70px;
+  transition: all 1s;
+}
+div input {
+  color: #fff;
+  position: absolute;
+  top: 0px;
+  height: 0px;
+  width: 500px;
+  height: 70px;
+  outline: none;
+  border: none;
+  border-radius: 35px;
+  padding-left: 30px;
+  font-size: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 1s;
+}
+div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: #fff;
+  border: none;
+  color: #974BE0;
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+  margin-right: 15px;
+  outline: none;
+  transition: all 1s;
+}
+div button span {
+  transform: rotate(-45deg);
+  width: 26px;
+  height: 26px;
+  position: relative;
+  transition: all 1s;
+}
+div button span::before {
+  content: ' ';
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  width: 5px;
+  height: 15px;
+  border-radius: 3px;
+  background: #974BE0;
+  transition: all 1s;
+}
+div button span::after {
+  content: ' ';
+  position: absolute;
+  top: -4px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 16px;
+  border-color: #974BE0;
+  border: 4px solid;
+  transition: all 1s;
+}
+div .X {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 22px;
+  left: 555px;
+  transition: all 1s;
+  cursor: pointer;
+}
+div .X::before {
+  content: ' ';
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  background: #fff;
+  transform: rotate(45deg);
+  transition: all 1s;
+}
+div .X::after {
+  content: ' ';
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  background: #fff;
+  transform: rotate(-45deg);
+  transition: all 1s;
+}
+
+.contain {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+}
+.contain .readyInput {
+  opacity: 0;
+  width: 70px;
+  height: 70px;
+}
+.contain .readyBtn {
+  width: 70px;
+  height: 70px;
+  margin: 0;
+}
+.contain .readyX {
+  opacity: 0;
+}
+
+ul {
+  width: 75%;
+  margin-top: 50px;
+  color: #fff;
+  max-height: 80%;
+  overflow-y: scroll;
+}
+ul li {
+  list-style: none;
+  border: none;
+  width: 100%;
+  border-radius: 20px;
+  min-height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px 10px 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  animation: liMove 2s;
+}
+ul li hr {
+  height: 3px;
+  background: #fff;
+  border: none;
+  border-radius: 2px;
+}
+
+@keyframes liMove {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+}
+
+/*滑块效果*/
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #bdbdbd;
+}
+
+/*# sourceMappingURL=index.css.map */

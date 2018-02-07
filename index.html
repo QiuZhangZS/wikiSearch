@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./style/index.css">
+</head>
+<body>
+	<a href="http://en.wikipedia.org/wiki/Special:Random">
+		随机WIKI条目
+	</a>
+	<div class="contain">
+		<input type="text"  placeholder="请输入搜索内容" class="readyInput">
+		<button class="readyBtn" id="searchBtn">
+			<span></span>
+		</button>
+		<span class="X readyX"></span>
+	</div>
+	<ul id="searchContent">
+		
+	</ul>
+</body>
+<script src="./script/index.js"></script>
+<script src="./modules/handlebars.js"></script>
+<script type="text/x-handlebars-template" id="template">
+	{{#each pages}}
+	<li>
+		<h2><a href="http://en.wikipedia.org/wiki/{{title}}">{{title}}</a></h2>
+		<hr>
+		<article>
+			{{#if thumbnail}}
+			{{#with thumbnail}}
+			<img src={{source}} alt="xxxx" style="width:{{width}};height:{{height}}">
+			{{/with}}
+			{{/if}}
+
+			{{extract}}
+		</article>
+	</li>
+	{{/each}}
+</script>
+</html>
